@@ -6,7 +6,7 @@ RUN apt-get update \
   
 WORKDIR /etc/freeradius
 
-COPY ./3.0/mods-config/sql/main/mysql/queries.conf .
+RUN cp ./3.0/mods-config/sql/main/mysql/queries.conf .
 
 RUN rm -rf ./3.0/
 
