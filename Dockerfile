@@ -6,6 +6,8 @@ RUN apt-get update \
   
 WORKDIR /etc/freeradius
 
+COPY ./3.0/mods-config/sql/main/mysql/queries.conf .
+
 RUN rm -rf ./3.0/
 
 RUN wget https://raw.githubusercontent.com/ricardolan85/vivavox-freeradius-server/main/radiusd.conf
